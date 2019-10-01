@@ -1,0 +1,36 @@
+title Authentication Sequence (Part 0.6 spa_new_note)
+
+note over browser:
+user write something in the text field
+and clicks "submit" button in browser
+end note
+
+note over browser:
+JS is executed in broswer where
+event handler creates new note
+and adds it to notes list
+end note
+
+note over browser:
+browser sends server POST request
+with new note as JSON-data
+(including timestamp and note)
+end note
+
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/spa_new_note
+
+note over server:
+server receives the POST request
+which contains the data from the form
+end note
+
+note over server:
+server create a new note object with the data,
+adds it to an array called notes,
+and then sends browser a redirect request
+to reload /notes page
+end note
+
+server-->browser: HTTP status code 201 
+
