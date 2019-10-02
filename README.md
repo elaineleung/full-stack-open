@@ -1,0 +1,6 @@
+**FULL STACK OPEN 2019**
+
+HOMEWORK FILES
+@eclleung
+
+02.10.2019 part-0
