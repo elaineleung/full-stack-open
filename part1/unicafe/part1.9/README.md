@@ -2,4 +2,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Full Stack Open Homework
 
-Part 1 - courseinfo
+Part 1.9 - unicafe (07.10)
+
+Added History component to display Statistics
