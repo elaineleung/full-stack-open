@@ -1,0 +1,12 @@
+body {
+    font-family: Arial;
+}
+
+.message {
+    color: black;
+    background: lightgrey;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
