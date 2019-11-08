@@ -1,5 +1,4 @@
-
-## Full Stack Open Homework Files
+## Full Stack Open Part 3
 
 @elaineleung
 
@@ -8,11 +7,7 @@
   
 * 04.11.2019
   * part3.8
-
-* 04.11.2019
   * part3.11
-
-* 04.11.2019
   * part3.12
 
 * 84.11.2019
