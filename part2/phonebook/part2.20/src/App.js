@@ -79,7 +79,7 @@ const App = () => {
               }, 5000)
             })
             ) 
-          : setNewNumber(''), setNewName('')
+          : (setNewNumber('') && setNewName(''))
           )
        : (duplicate.name===newName && duplicate.number===newNumber)
        ? alert(`${duplicate.name}'s name and number are already in the phonebook!`)

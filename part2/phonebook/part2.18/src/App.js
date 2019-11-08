@@ -52,7 +52,7 @@ const App = () => {
             setNewNumber('')
             setPersons(persons.map(person => person.name !== newName? person : returnedName ))
             })) 
-          : setNewNumber(''), setNewName('')
+          : (setNewNumber('') && setNewName(''))
           )
        : null)   
    }
