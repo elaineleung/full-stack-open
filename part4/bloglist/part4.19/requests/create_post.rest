@@ -1,0 +1,11 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InB1c2giLCJpZCI6IjVkZGM3Mjg5ZGVlNWIwMDdmMDE5ZTUzYSIsImlhdCI6MTU3NDg4OTkxMH0.bhSD7ykGpQugyn-ypbKQGEgCd3U4fA-Umy3YFvDIcuQ
+
+  {
+    "title": "What They Thought of Programmers",
+    "author": "Robert C. Martin",
+    "url": "http://blog.cleancoder.com/uncle-bob/2019/11/03/WhatTheyThoughtOfUs.html",
+    "likes": 0,
+    "__v": 0
+  }
