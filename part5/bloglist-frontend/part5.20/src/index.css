@@ -1,0 +1,82 @@
+body {
+    font-family: Arial;
+    font-size: 16px;
+}
+
+section {
+    margin: 10px 0;
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.element {
+    margin: 30px 0;
+}
+
+.label {
+    width: 100px;
+    display: inline-block;
+}
+
+.input {
+    display: inline-block;
+}
+
+.success {
+    color: black;
+    background: lightgrey;
+    border: 2px solid green;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+.blog {
+    padding: 5px;
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+  
+.blog p {
+    margin: 0;
+}
+
+.form {
+    line-height: 2;
+}
+
+.button {
+    margin-top: 10px;
+    background-color: rgb(124, 124, 124);
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 14px; 
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 3px;
+}
+
+.remove {
+    background-color: rgb(172, 70, 39);
+}
+
+.cancel {
+    background-color: rgb(148, 53, 111);
+}
+
+.error {
+    color: black;
+    background: lightgrey;
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 0;
+    max-width: 400px;
+}
