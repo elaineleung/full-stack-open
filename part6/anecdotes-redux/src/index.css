@@ -1,0 +1,12 @@
+body {
+  font-family: Arial;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.anecdote {
+  margin: 10px 0;
+}
