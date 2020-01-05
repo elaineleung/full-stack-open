@@ -10,3 +10,4 @@
 * part3 : completed on 08.11.2019
 * part4 : completed on 29.11.2019
 * part5 : completed on 02.01.2020
+* part6 : completed on 05.01.2020

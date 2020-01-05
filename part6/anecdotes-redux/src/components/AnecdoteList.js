@@ -1,15 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { voteAnecdote } from '../reducers/anecdoteReducer'
-import { setNotification, removeNotification } from '../reducers/notificationReducer'
+import { setNotification } from '../reducers/notificationReducer'
 
 const AnecdoteList = (props) => {
-  const vote = (id) => {
-    const anecdote = props.anecdotes.find(a => a.id === id)
-    const message = `You voted for "${anecdote.content}"`
-    props.voteAnecdote(id)
-    props.setNotification(message)
-    setTimeout(() => props.removeNotification(''), 5000)
+  const vote = (anecdote) => {
+    props.voteAnecdote(anecdote)
+    props.setNotification(`You voted for "${anecdote.content}"`, 5)
   }
 
   return (
@@ -21,7 +18,7 @@ const AnecdoteList = (props) => {
           </div>
           <div>
             has {anecdote.votes} <button 
-            onClick={() => vote(anecdote.id)}>Vote</button>
+            onClick={() => vote(anecdote)}>Vote</button>
           </div>
         </div>
       )}
@@ -45,8 +42,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
   voteAnecdote,
-  setNotification, 
-  removeNotification
+  setNotification
 }
 
 export default connect(
