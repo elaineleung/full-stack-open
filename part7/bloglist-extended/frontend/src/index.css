@@ -1,0 +1,27 @@
+body {
+    font-family: Helvetica;
+    padding-bottom: 50px
+}
+
+h3 {
+    margin-bottom: 5px;
+}
+
+a {
+    /* text-decoration: none; */
+    color: rgb(14, 39, 77);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.spacing {
+    margin: 20px 0;
+}

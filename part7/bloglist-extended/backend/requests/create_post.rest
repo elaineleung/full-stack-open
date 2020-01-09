@@ -1,0 +1,11 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InB1c2giLCJpZCI6IjVkZGM3Mjg5ZGVlNWIwMDdmMDE5ZTUzYSIsImlhdCI6MTU3NzAwMzczNH0.6Y-MGl_Z3wbwhgGJbRWJtX6s4y1vvefRj9XfrLOirXM
+  
+  {
+    "title": "Circulatory",
+    "author": "Robert C. Martin",
+    "url": "http://blog.cleancoder.com/uncle-bob/2019/10/31/Circulatory.html",
+    "likes": 0,
+    "__v": 0
+  }
