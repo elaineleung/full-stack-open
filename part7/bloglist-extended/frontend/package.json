@@ -10,7 +10,7 @@
     "eject": "react-scripts eject",
     "server": "json-server -p3001 db.json",
     "eslint": "eslint .",
-    "cypress:open": "cypress open"
+    "cy:open": "cypress open"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",

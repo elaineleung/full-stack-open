@@ -3,10 +3,17 @@ const mongoose = require('mongoose')
 const helper = require('./test_helper')
 const app = require('../app')
 const api = supertest(app)
-
+const User = require('../models/user')
 const Blog = require('../models/blog')
 
 beforeEach(async () => {
+
+  beforeAll(async () => {
+    await User.remove({})
+    const user = new User({ username: 'test', password: 'test', name:"tester" })
+    await user.save()
+  })
+
   await Blog.deleteMany({})
 
   for (let blog of helper.initialBlogs) {
@@ -14,6 +21,28 @@ beforeEach(async () => {
     let savedBlog = await blogObject.save()
     savedBlog.toJSON()
   }
+})
+
+test('creation succeeds with a fresh username', async () => {
+  const usersAtStart = await helper.usersInDb()
+
+  const newUser = {
+    username: 'Elaine',
+    name: 'elaine',
+    password: 'test',
+  }
+
+  await api
+    .post('/api/users')
+    .send(newUser)
+    .expect(200)
+    .expect('Content-Type', /application\/json/)
+
+  const usersAtEnd = await helper.usersInDb()
+  expect(usersAtEnd.length).toBe(usersAtStart.length + 1)
+
+  const usernames = usersAtEnd.map(u => u.username)
+  expect(usernames).toContain(newUser.username)
 })
 
 // test('blogs are returned', async () => {

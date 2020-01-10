@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Form, Grid, Header, Segment } from 'semantic-ui-react'
+import { Grid, Header, Segment } from 'semantic-ui-react'
 import Notification from '../components/Notification'
 import { connect } from 'react-redux'
 
@@ -10,24 +10,41 @@ const Login = (props) => {
       <Grid.Column style={{ maxWidth: 450 }}>
         <Notification />
         <Header as='h2' color='black' textAlign='center'>
-        Login to Blog App
+        Log in to Blog App
         </Header>
-        <Form size='large' onSubmit={props.handleLogin}>
+        <form className='ui form large' onSubmit={props.handleLogin}>
           <Segment stacked>
-            <Form.Input fluid icon='user' iconPosition='left' placeholder='Username here' {...props.username} />
-            <Form.Input
-              fluid
-              icon='lock'
-              iconPosition='left'
-              placeholder='Password here'
-              type='password'
-              {...props.password}
-            />
-            <Button type="submit" fluid size='large'>
+            <div class='field'>
+              <label>Username</label>
+              <input
+                id='username'
+                fluid icon='user' 
+                iconPosition='left' 
+                placeholder='Username here' 
+                {...props.username} />
+            </div>
+            <div class='field'>
+              <label>Password</label>
+              <input 
+                id='password'
+                fluid
+                icon='lock'
+                iconPosition='left'
+                placeholder='Password here'
+                type='password'
+                {...props.password}
+              />
+            </div>
+            <button 
+              className='ui button'
+              id='button' 
+              type="submit" 
+              fluid 
+              size='large'>
             Login
-            </Button>
+            </button>
           </Segment>
-        </Form>
+        </form>
       </Grid.Column>
     </Grid>
   )}

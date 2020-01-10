@@ -10,6 +10,10 @@ const NewBlog = (props) => {
   const [author, authorReset] = useField('text')
   const [url, urlReset] = useField('text')
 
+  const padding = { 
+    padding: 5
+   }
+
   const handleSubmit = (event) => {
     event.preventDefault()
     props.createBlog({
@@ -18,38 +22,42 @@ const NewBlog = (props) => {
       url: url.value,
       likes: 0
     })
-    props.setNotification(`You created "${title.value}"!`, 5)
+    props.setNotification(`You created "${title.value}"!`, 3)
     titleReset()
     authorReset()
     urlReset()
   }
 
   return(
-    <div className='spacing'>
       <Form size='small' onSubmit={handleSubmit}>
         <Form.Field
+          id='title'
           label='Title'
           control='input'
           placeholder='Title'
           { ...title }
         />
         <Form.Field
+          id='author'
           label='Author'
           control='input'
           placeholder='Author'
           { ...author }
         />
         <Form.Field
+          id='url'
           label='URL'
           control='input'
           placeholder='URL'
           { ...url }
         />
-        <div className='spacing'>
-          <Button type="submit">Create</Button>
+        <div id='button'>
+        <Button 
+          style={padding}
+          type="submit">Create Blog
+        </Button>
         </div>
       </Form>
-    </div>
   )
 }
 
