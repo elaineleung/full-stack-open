@@ -11,6 +11,6 @@
   "dependencies": {
     "apollo-server": "^2.19.1",
     "graphql": "^14.7.0",
-    "node-fetch": ">=2.6.1"
+    "node-fetch": ">=2.6.7"
   }
 }
